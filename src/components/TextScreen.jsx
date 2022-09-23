@@ -7,8 +7,6 @@ const TextScreen = ({}) => {
         <Text>This is a simple Text view contained within a view.</Text>
       </View>
     </View>
-
-
   );
 };
 

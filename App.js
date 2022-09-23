@@ -18,15 +18,17 @@ export default function App() {
         // Note: these should maybe be their own components
       }
       <Button
-        onPress={}
+        onPress={routes.TextScreen}
         style={styles.button}
         title="TextScreen!"
-      />
+        />
       <Button 
+        onPress={routes.ImageScreen}
         style={styles.button}
         title="ImageScreen!"
-      />
+        />
       <Button 
+        onPress={routes.InputScreen}
         style={styles.button}
         title="InputScreen!"
       />
