@@ -9,7 +9,7 @@ export const palette = {
 }
 
 export const darkModeColors = {
-  background: darkMode ? palette.white : palette.darkGray
+  background: darkMode ? palette.darkGray : palette.white
 }
 
 export const styles = StyleSheet.create({

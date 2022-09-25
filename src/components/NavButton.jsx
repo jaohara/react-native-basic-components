@@ -1,6 +1,6 @@
 import { Text, View, TouchableOpacity } from "react-native";
 
-import styles from "../style/styles";
+import { styles } from "../style/styles";
 
 const NavButton = ({ title, onPress }) => {
   return (

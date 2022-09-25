@@ -3,8 +3,6 @@ import StyledText from "../StyledText";
 
 import ScreenView from "../ScreenView";
 
-import styles from "../../style/styles";
-
 const TextScreen = ({}) => {
   return (
     <ScreenView>

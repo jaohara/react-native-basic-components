@@ -4,7 +4,7 @@ import { routeNames } from "../../routes";
 
 import NavButton from "../NavButton";
 
-import styles from "../../style/styles";
+import { styles } from "../../style/styles";
 
 const HomeScreen = ({ navigation }) => {
   // TODO: Confirm these are firing properly via onPress on the buttons

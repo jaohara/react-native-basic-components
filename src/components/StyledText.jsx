@@ -1,6 +1,6 @@
 import { Text } from "react-native"
 
-import styles from "../style/styles";
+import { styles } from "../style/styles";
 
 const StyledText = ({ children }) => {
   return (
