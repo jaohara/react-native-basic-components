@@ -1,40 +1,50 @@
 import { StatusBar } from 'expo-status-bar';
 import { Button, StyleSheet, Text, View } from 'react-native';
 
-import ImageScreen from './src/components/ImageScreen';
-import InputScreen from './src/components/InputScreen';
-import TextScreen from './src/components/TextScreen';
+// nav stuff
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+
+import { routes } from './src/routes';
+
+import { darkModeColors } from './src/style/styles';
 
 export default function App() {
-  const routes = {
-    TextScreen: () => {},
-    InputScreen: () => {},
-    ImageScreen: () => {},
-  }
+  // stack navigator component
+  const StackNav = createNativeStackNavigator();
+
+  
+
+  
+  /*
+    REMEMBER:  Once you've finished up with the basic nav stuff (buttons successfully 
+      navigate to screens), merge the features back in to main and start a new branch
+      for a new feature!
+  */
+
+
 
   return (
-    <View style={styles.container}>
-      {
-        // Note: these should maybe be their own components
-      }
-      <Button
-        onPress={routes.TextScreen}
-        style={styles.button}
-        title="TextScreen!"
-        />
-      <Button 
-        onPress={routes.ImageScreen}
-        style={styles.button}
-        title="ImageScreen!"
-        />
-      <Button 
-        onPress={routes.InputScreen}
-        style={styles.button}
-        title="InputScreen!"
+    <NavigationContainer>
+      <StatusBar
+        backgroundColor={darkModeColors.background}
       />
+      {
+        //TODO: Confirm initialRouteName works via this method
+      }
+      <StackNav.Navigator initialRouteName={routes[0].name}>
+        {
+          //TODO: Confirm the routes are able to be reached
+          //TODO: Confirm route props are destructured properly from "route" parameter
+        }
+        {
+          routes.map(route => (
+            <StackNav.Screen {...route} key={`screen-${route.name}`}/>
+          ))
+        }
+      </StackNav.Navigator>
+    </NavigationContainer>
 
-      <StatusBar style="auto" />
-    </View>
   );
 }
 
