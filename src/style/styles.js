@@ -1,10 +1,13 @@
 import { StyleSheet } from "react-native";
 
+const commonBorderRadius = 24;
+// const commonFontSize = 16;
 const darkMode = false;
 
 export const palette = {
   darkGray: "#21252b",
   blue: "#1592ff",
+  lightGray: "#efefef",
   white: "#fff",
 }
 
@@ -51,6 +54,30 @@ export const styles = StyleSheet.create({
   imageView: {
     marginBottom: 16,
   },
+  inputListItem: {
+    alignItems: "center",
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    borderRadius: commonBorderRadius,
+    backgroundColor: palette.lightGray,
+    marginBottom: 12,
+    padding: 8,
+    paddingLeft: 16,
+  },
+  inputListItemButton: {
+    alignItems: "center",
+    backgroundColor: palette.blue,
+    flex: 1,
+    justifyContent: "center",
+    borderRadius: 48,
+    height: 36,
+    width: 36,
+  },
+  inputListItemButtonText: {
+    alignItems: "center",
+    color: palette.white,
+  },
   navButtonView: {
     width: "66%",
     marginBottom: 16,
@@ -59,6 +86,17 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     marginBottom: 12,
   },
+  textInput: {
+    backgroundColor: palette.lightGray,
+    fontSize: 16,
+    borderRadius: commonBorderRadius,
+    height: 48,
+    marginTop: 12,
+    marginBottom: 12,
+    padding: 12,
+    paddingTop: 2,
+    paddingBottom:2,
+  },  
   screen: {
     // TODO: assign this dynamically based on darkmode
     backgroundColor: palette.white,
@@ -66,6 +104,10 @@ export const styles = StyleSheet.create({
     minHeight: "100%",
     padding: 24,
     // paddingBottom: 48,
+  },
+  submitButtonView: {
+    width: "100%",
+    marginBottom: 16,
   }
 });
 
